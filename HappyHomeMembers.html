@@ -1,0 +1,332 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111">
+
+
+
+    <title>CodePen - Card Grid Layout</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <style>
+        /* Basic */
+        @import url("https://use.typekit.net/ovt6ynt.css");
+        @import url("https://use.typekit.net/oth3vqr.css");
+        @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
+
+        body {
+            display: flex !important;
+            justify-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://assets.codepen.io/4927073/Summer_Sandwich-artwork-main.jpg);
+            background-size: cover;
+            background-position: 50% 50% !important;
+
+
+
+
+        }
+
+        .mycontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 12pt 28pt;
+            max-width: 600pt;
+
+        }
+
+        .mycontainer img {
+            object-fit: cover;
+            width: 116pt;
+            height: 108pt;
+            box-shadow: 0px 1px 0px 0px rgb(255 255 255 / 50%) inset, 0px 3px 2px -1px rgb(13 13 13 / 65%), 0px 6px 6px 0px rgb(0 0 0 / 15%), 0px -4px 4px 0px rgb(0 0 0 / 15%) inset, 0px 2px 4px 2px rgb(255 255 255 / 55%) inset, 0px 0px 1px 2px rgb(0 0 0 / 10%);
+            border: 0.125pt solid #f0f2fc;
+            margin-top: 0;
+            border-radius: 10px 10px 4px 4px !important;
+            object-position: 50% 90%;
+
+        }
+
+        .thumbnails {
+            all: initial;
+            border-radius: 14px !important;
+            display: block !important;
+            overflow: hidden;
+            height: 185pt;
+            width: 132pt !important;
+            margin: 18pt !important;
+            border-bottom: 3px solid hsl(220deg 10% 62%);
+            color: #212529 !important;
+            background: linear-gradient(135deg, transparent 0, transparent 8%, rgba(255, 255, 255, 0.03) 30%, rgba(255, 255, 255, 0.03) 60%, rgba(255, 255, 255, 0) 68%) !important;
+            background-color: hsl(0deg 0% 90% / 65%) !important;
+            border-color: #ffffff99 #ffffff60 #0001 #ffffff50 !important;
+            backdrop-filter: blur(11px) saturate(110%) !important;
+            box-shadow: 0 1px 5px 1px rgb(41 41 41 / 45%), 0 0.33em 0.725em -0.455em rgb(0 0 0 / 40%), inset 0 0.0625em 0 rgb(255 255 255 / 50%), inset 0 -0.125em 0.0625em rgb(0 0 0 / 28%) !important;
+            font-size: 10pt;
+            border: 3px outset rgba(255, 255, 255, 0.3) !important;
+            text-shadow: 0.25px 0.25px 0.85px #f8f9fa, 0.125px 0.125px 1px hsl(210deg 14% 38% / 83%);
+        }
+
+
+
+
+        a:-webkit-any-link {
+            text-decoration: none !important;
+        }
+
+        .XQ6p1d {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 6pt;
+        }
+
+        .tnlink {
+            text-decoration: none !important;
+            margin: 1pt 6pt 0pt 6pt;
+            font-size: 20px;
+            text-shadow: 0.5px 0.5px 1.25px rgb(0 0 0 / 65%);
+            font-family: antique-olive, sans-serif;
+            text-transform: none;
+            font-weight: 700;
+            color: white !important;
+            text-shadow: 1px 0.5px 0.5px #b3b3b3, -0.5px -0.5px 0px white, 0.5px -0.5px 0.5px #cccccc, 0.5px 0.5px 0.5px #d6c2c2, 1.25px 1.25px 2.5px rgb(51 51 51 / 80%), 0.5px 0.5px 1.25px rgb(0 0 0 / 95%);
+            letter-spacing: -0.25px !important;
+            font-family: "Barlow Condensed", sans-serif !important;
+        }
+
+        .tnlink2 {
+            padding: 2pt 2pt 0pt 6pt;
+            text-decoration: none !important;
+            margin-top: 0px;
+            margin-bottom: 2px;
+            letter-spacing: .1666666667em !important;
+            line-height: 1rem;
+            text-transform: uppercase;
+            font-family: Roboto, sans-serif !important;
+            text-shadow: 0.25px 0.25px 0.85px #f8f9fa, 0.125px 0.125px 1px hsl(210deg 14% 38% / 83%);
+            color: hsl(210deg 11% 15%) !important;
+            font-family: 'antique-olive' !important;
+            font-weight: 400 !important;
+            font-size: 9.5pt !important;
+        }
+
+        .tnlink3 {
+            font-family: 'antique-olive' !important;
+            font-weight: 300 !important;
+            font-size: 10pt !important;
+            color: #161719;
+            text-transform: lowercase;
+            padding: 2pt 2pt 0pt 6pt;
+            margin-top: 1px;
+            margin-bottom: 0px;
+            letter-spacing: .1666666667em !important;
+            text-shadow: 0.25px 0.25px 0.85px #f8f9fa, 0.125px 0.125px 1px hsl(210deg 14% 38% / 83%);
+            line-height: 10pt;
+        }
+
+        .iconexternallink {
+            position: absolute;
+            display: inline-flex;
+            width: 15pt !important;
+            height: 15pt !important;
+            margin: -10px 5px -2px 2px !important;
+            clear: none;
+            box-shadow: none !important;
+            border: none !important;
+            filter: drop-shadow(0.75px 0.75px 0.25px black);
+            background-color: hsl(228deg 14% 96% / 10%);
+            border-radius: 25%;
+            padding: 4pt;
+            transform: scale(0.575) !important;
+            box-shadow: 1pt 1pt 2pt 0px #ebecf0 !important;
+        }
+
+        .fa,
+        .fa-solid {
+            margin-right: 2.5px;
+            margin-left: -1px;
+            font-size: 9pt !important;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+</head>
+
+<body translate="no">
+    <!-- applying fonts -->
+
+    <div class="mycontainer">
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://petssogood.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://cdn.shopify.com/s/files/1/0048/1047/3590/products/PSG_Haro_24_720x.jpg?v=1643221723"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Pets So Good </div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>petssogood.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>17k followers</div>
+
+            </a></div>
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://wareofthedog.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://cdn.shopify.com/s/files/1/0422/9588/5973/files/10_1024x1024.jpg?v=1664640176"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Ware of the Dog </div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>wareofthedog.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>6.7k followers</div>
+
+            </a></div>
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://sirdogwood.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://cdn.shopify.com/s/files/1/1137/7574/products/2022-08-24114550_1024x1024_2x_ecc6796a-11ed-47a0-bd7d-16279f19abbc_900x.webp?v=1668141822"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Sir Dogwood</div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>sirdogwood.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>13k followers</div>
+
+            </a></div>
+
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://www.maxbone.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://cdn.shopify.com/s/files/1/1137/7574/products/christian-cowan-holiday-glitz-jumper-467387_1000x_54993fed-3d6c-4a42-bdd4-6fded4382211_900x.webp?v=1667315674"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Max Bone</div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>maxbone.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>212k followers</div>
+
+            </a></div>
+
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://fablepets.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://p1-tt.byteimg.com/origin/tos-cn-i-qvj2lq49k0/47eb859fe94a41e18a7de5206b4d65ef.jpg"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Fable Pets</div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>fablepets.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>51.1k followers</div>
+
+            </a></div>
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://us.williamwalker.de"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://cdn.shopify.com/s/files/1/0140/9096/0953/products/Nayla_Mood_Shoot_16.02.222424_3058085d-9d1a-4773-9d40-82e5715d8907_1400x.jpg?v=1667836605"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">William Walker </div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>us.williamwalker.de</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>11.1k followers</div>
+
+            </a></div>
+
+
+        <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://petssogood.com/"
+                target="_blank">
+                <div aria-hidden="true" class="XQ6p1d">
+                    <g-img class="ZGomKf" style="position:relative"><img
+                            src="https://www.weelywally.com/wp-content/uploads/2019/10/komidin-beyaz-torpil.jpg"
+                            style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84" width="84"
+                            alt="">
+                        <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
+                    </g-img>
+                </div>
+                <div class="tnlink">Weely Wally </div>
+                <div class="tnlink2">Pet supply store</div>
+                <div class="tnlink3"><i class="fa fa-globe" aria-hidden="true"></i>petssogood.com</div>
+                <div class="tnlink3"><i class="fa-solid fa-paw"></i>17k followers</div>
+
+            </a></div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/9bbcab95c6.js"></script>
+    <style media="all" id="fa-v4-font-face"></style>
+
+
+
+
+
+</body>
+
+</html>
