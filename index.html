@@ -226,6 +226,10 @@
             display: none;
         }
 
+        .renderactive {
+            display: block !important;
+        }
+
         .render {
             display: block !important;
         }
@@ -277,7 +281,7 @@
             <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://petssogood.com/"
                     target="_blank">
                     <div aria-hidden="true" class="XQ6p1d">
-                        <g-img class="ZGomKf" style="position:relative"><img src="dk.jpg"
+                        <g-img class="ZGomKf" style="position:relative"><img src="assests/dk.jpg"
                                 style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84"
                                 width="84" alt="">
                             <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
@@ -294,7 +298,7 @@
             <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://wareofthedog.com/"
                     target="_blank">
                     <div aria-hidden="true" class="XQ6p1d">
-                        <g-img class="ZGomKf" style="position:relative"><img src="nk.jpg"
+                        <g-img class="ZGomKf" style="position:relative"><img src="assests/nk.jpg"
                                 style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84"
                                 width="84" alt="">
                             <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
@@ -311,7 +315,7 @@
             <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://sirdogwood.com/"
                     target="_blank">
                     <div aria-hidden="true" class="XQ6p1d">
-                        <g-img class="ZGomKf" style="position:relative"><img src="surya.jpeg"
+                        <g-img class="ZGomKf" style="position:relative"><img src="assests/surya.jpeg"
                                 style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84"
                                 width="84" alt="">
                             <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
@@ -329,7 +333,7 @@
             <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://www.maxbone.com/"
                     target="_blank">
                     <div aria-hidden="true" class="XQ6p1d">
-                        <g-img class="ZGomKf" style="position:relative"><img src="ajith.png"
+                        <g-img class="ZGomKf" style="position:relative"><img src="assests/ajith.png"
                                 style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84"
                                 width="84" alt="">
                             <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
@@ -347,7 +351,7 @@
             <div jscontroller="I8LNlc" class="thumbnails" style="width:84px"><a href="https://fablepets.com/"
                     target="_blank">
                     <div aria-hidden="true" class="XQ6p1d">
-                        <g-img class="ZGomKf" style="position:relative"><img src="uv.png"
+                        <g-img class="ZGomKf" style="position:relative"><img src="assests/uv.png"
                                 style="border-radius:8px 8px 8px 8px" class="YQ4gaf zr758c wA1Bge" height="84"
                                 width="84" alt="">
                             <div class="LLO8yd" style="border-radius:8px 8px 8px 8px"></div>
@@ -399,33 +403,36 @@
         </div>
     </div>
     <div id="Dashboard">
-        <div class="MainWatch">
-            <div class="Bracelet"></div>
-            <div class="SubMain">
-                <div class="rol-Watch"></div>
-                <div class="InsideWatch">
-                    <div class="hand"></div>
-                    <div class="MainData">
-                        <canvas class="sky hide-element" id="sky"></canvas>
-                        <div class="ModelWatchSub_1"></div>
-                        <div class="ModelWatchSub_1_3"></div>
-                        <div class="time">
-                            <div class="timehour">7</div>
-                            <div class="timesec">:31</div>
-                        </div>
-                        <div class="ModelWatch_1"></div>
-                        <div class="ModelWatch_2"></div>
-                        <div class="ModelWatch_3"></div>
-                        <div class="ModelWatch_4"></div>
-                    </div>
-                </div>
+        <!-- <iframe src="assests/watch.html"></iframe> -->
+        <!-- <div id="watch"></div> -->
+        <div id="time">
+            <div class="circle" style="--clr: #0d6efd">
+                <div class="dots hr_dot" style="transform: rotate(120deg);"></div>
+                <svg>
+                    <circle cx="75" cy="75" r="70"></circle>
+                    <circle cx="75" cy="75" r="70" id="hh" style="stroke-dashoffset: 293.333;"></circle>
+                </svg>
+                <div class="num" id="hours">04<span>Hours</span></div>
             </div>
-        </div>
-        <div class="MenuSwicher">
-            <li class="Menu-li" id="model_1">1</li>
-            <li class="Menu-li" id="model_2">2</li>
-            <li class="Menu-li" id="model_3">3</li>
-            <li class="Menu-li" id="model_4">4</li>
+            <div class="circle" style="--clr: #0d6efd">
+                <div class="dots min_dot" style="transform: rotate(336deg);"></div>
+                <svg>
+                    <circle cx="75" cy="75" r="70"></circle>
+                    <circle cx="75" cy="75" r="70" id="mm" style="stroke-dashoffset: 29.3333;"></circle>
+                </svg>
+                <div class="num" id="minutes">56<span>Minutes</span></div>
+            </div>
+            <div class="circle" style="--clr: #0d6efd">
+                <div class="dots sec_dot" style="transform: rotate(0deg);"></div>
+                <svg>
+                    <circle cx="75" cy="75" r="70"></circle>
+                    <circle cx="75" cy="75" r="70" id="ss" style="stroke-dashoffset: 440;"></circle>
+                </svg>
+                <div class="num" id="seconds">00<span>Seconds</span></div>
+            </div>
+            <div class="ap">
+                <div id="ampm">PM</div>
+            </div>
         </div>
     </div>
     <script
@@ -435,6 +442,48 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
     <script id="rendered-js">
+        $(document).ready(function () {
+            $("#Dashboard").addClass("renderactive");
+        });
+        setInterval(() => {
+            let hours = document.getElementById('hours');
+            let minutes = document.getElementById('minutes');
+            let seconds = document.getElementById('seconds');
+            let ampm = document.getElementById('ampm');
+            let hh = document.getElementById('hh');
+            let mm = document.getElementById('mm');
+            let ss = document.getElementById('ss');
+            let hr_dot = document.querySelector('.hr_dot');
+            let min_dot = document.querySelector('.min_dot');
+            let sec_dot = document.querySelector('.sec_dot');
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+            let am = h >= 12 ? 'PM' : 'AM';
+
+            //convert 24hr clock to 12hr clock
+            if (h > 12) {
+                h = h - 12;
+            }
+            // add zero before single digit number
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            hours.innerHTML = h + "<span>Hours</span>";
+            minutes.innerHTML = m + "<span>Minutes</span>";
+            seconds.innerHTML = s + "<span>Seconds</span>";
+            ampm.innerHTML = am;
+
+            hh.style.strokeDashoffset = 440 - 440 * h / 12;
+            // 12 hrs clock
+            mm.style.strokeDashoffset = 440 - 440 * m / 60;
+            ss.style.strokeDashoffset = 440 - 440 * s / 60;
+
+            hr_dot.style.transform = `rotate(${h * 30}deg)`;
+            min_dot.style.transform = `rotate(${m * 6}deg)`;
+            sec_dot.style.transform = `rotate(${s * 6}deg)`;
+        });
         // ---------Responsive-navbar-active-animation-----------
         function test() {
             var tabsNewAnim = $("#navbarSupportedContent");
@@ -484,7 +533,11 @@
             });
         });
         function pagerender(x) {
+            // if (x == 'Dashboard') {
+            //     $("#watch").load("assests/watch.html");
+            // }
             $(oldid).removeClass("render");
+            $("#Dashboard").removeClass("renderactive");
             var id = "#" + x;
             $(id).addClass("render");
             oid(id);
@@ -508,6 +561,8 @@
             // Add active class to target link
             target.parent().addClass("active");
         });
+
+
 
         // Add active class on another page linked
         // ==========================================
