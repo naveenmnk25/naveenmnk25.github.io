@@ -224,7 +224,7 @@ body {
     justify-content: center;
     margin: 0;
     padding: 12pt 28pt;
-    max-width: 600pt;
+    max-width: 985pt;
 
 }
 
@@ -434,4 +434,21 @@ a:-webkit-any-link {
     background: var(--clr);
     border-radius: 50%;
     box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+/* Details */
+#Details {
+    background-color: #ebecf0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#Details tbody tr td:nth-child(4) {
+    color: green;
+}
+
+.tabel-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
