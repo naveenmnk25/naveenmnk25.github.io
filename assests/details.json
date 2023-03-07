@@ -48,15 +48,18 @@
     },
     {
         "sno": 8,
-        "spend": 330
+        "spend": 330,
+        "Item": "vegetables  and others"
     },
     {
         "sno": 9,
-        "spend": 1930
+        "spend": 1930,
+        "Item": "Rice , Egg Vegi and others"
     },
     {
         "sno": 10,
-        "spend": 360
+        "spend": 360,
+        "Item": "Oil and Ghee"
     },
     {
         "sno": 11
