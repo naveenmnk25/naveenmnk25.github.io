@@ -32,6 +32,7 @@ $(document).ready(function () {
     setTimeout(function () {
         test();
     });
+    
 });
 $(window).on("resize", function () {
     setTimeout(function () {
@@ -79,3 +80,5 @@ $(window).on('load', function () {
 });
 
 //clock
+
+

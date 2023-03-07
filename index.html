@@ -22,7 +22,8 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
 
     <style>
@@ -442,66 +443,31 @@
         </div>
     </div>
     <div id="Details">
-        <table class="table table-hover">
-            <thead>
-                <tr class="bg-success">
-                    <th scope="col">s.no</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Room Rent jan-2023</th>
-                    <th scope="col">status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td><img src="assests/nk.jpg" class="tabel-img" /> Naveen</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td><img src="assests/dk.jpg" class="tabel-img" />Dhinesh</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td><img src="assests/surya.jpeg" class="tabel-img" />Surya</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td><img src="assests/ajith.png" class="tabel-img" />Ajith</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td><img src="assests/uv.png" class="tabel-img" />Yuvaraj</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td><img src="assests/tamil.jpg" class="tabel-img" />Tamil</td>
-                    <td>1400</td>
-                    <td>paied</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td><img src="" alt="Ajith" class="tabel-img" />Ajith</td>
-                    <td>2450</td>
-                    <td>paied</td>
-                </tr>
-                <tr class="table-info">
-                    <th scope="row">Total</th>
-                    <td></td>
-                    <td>2100</td>
-                    <td>paied</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-md-4 ">
+                <table class="table table-striped table-hover table-bordered border-primary">
+                    <thead>
+                        <th>Name</th>
+                        <th>To give</th>
+                        <th>Given</th>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                </table>
+                <!-- <pre id="jsondata"></pre> -->
+            </div>
+            <div class="col-md-4">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <th>Amt Spend</th>
+                        <th>Total Spend</th>
+                        <th>Remaining</th>
+                    </thead>
+                    <tbody id="tableData2"></tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
     <script
         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
@@ -601,9 +567,10 @@
             });
         });
         function pagerender(x) {
-            // if (x == 'Dashboard') {
-            //     $("#watch").load("assests/watch.html");
-            // }
+            if (x == 'Details') {
+                // $("#watch").load("assests/watch.html");
+                loadJSON();
+            }
             $(oldid).removeClass("render");
             $("#Dashboard").removeClass("renderactive");
             var id = "#" + x;
@@ -631,7 +598,46 @@
         });
 
 
+        function loadJSON() {
+            console.log("hi")
+            $.getJSON('https://naveenmnk25.github.io/assests/details.json', function (data) {
+                console.log("data", data);
+                Member = data.filter(x => x.sno < 8)
+                AmtSpend = data.filter(x => x.sno >= 8).filter(x => x.spend > 0)
+                console.log("Member", Member);
+                console.log("AmtSpend", AmtSpend);
 
+                var k = "";
+                var totalGiven = 0;
+                totalGiven = Member.filter(x => x.sno == 7).map(x => x.Given);
+
+                for (i = 0; i < Member.length; i++) {
+                    k += '<tr>';
+                    k += '<td>' + Member[i].Name + '</td>';
+                    k += '<td>' + Member[i].ToGive + '</td>';
+                    k += '<td>' + Member[i].Given + '</td>';
+                    k += '</tr>';
+                }
+
+                $("#tableData").html(k);
+
+                var s = "";
+                var TotalAmt = 0, RemAmt = 0, temp = totalGiven;
+                for (i = 0; i < AmtSpend.length; i++) {
+                    TotalAmt = TotalAmt + AmtSpend[i].spend;
+                    RemAmt = temp - AmtSpend[i].spend;
+                    temp = RemAmt;
+                    s += '<tr>';
+                    s += '<td>' + AmtSpend[i].spend + '</td>';
+                    s += '<td>' + TotalAmt + '</td>';
+                    s += '<td>' + RemAmt + '</td>';
+                    s += '</tr>';
+                }
+
+                $("#tableData2").html(s);
+            });
+
+        }
         // Add active class on another page linked
         // ==========================================
         // $(window).on('load', function () {
