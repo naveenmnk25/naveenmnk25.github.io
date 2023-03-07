@@ -472,6 +472,7 @@
             <div class="col-md-4">
                 <table class="table table-striped table-hover">
                     <thead>
+                        <th>Items</th>
                         <th>Amt Spend</th>
                         <th>Total Spend</th>
                         <th>Remaining</th>
@@ -664,6 +665,7 @@
                     RemAmt = temp - AmtSpend[i].spend;
                     temp = RemAmt;
                     s += '<tr>';
+                    s += '<td>' + AmtSpend[i].Item + '</td>';
                     s += '<td>' + AmtSpend[i].spend + '</td>';
                     s += '<td>' + TotalAmt + '</td>';
                     s += '<td>' + RemAmt + '</td>';

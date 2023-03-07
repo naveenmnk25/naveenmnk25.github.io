@@ -28,7 +28,8 @@ let Member = [{
     "Each": Number,
     "ToGive": Number,
     "Given": Number,
-    "spend": Number
+    "spend": Number,
+    "Item": Number
 }]
 
 let rowObject;
@@ -74,6 +75,7 @@ document.getElementById('button').addEventListener("click", () => {
                 RemAmt = temp - AmtSpend[i].spend;
                 temp = RemAmt;
                 s += '<tr>';
+                s += '<td>' + AmtSpend[i].Item + '</td>';
                 s += '<td>' + AmtSpend[i].spend + '</td>';
                 s += '<td>' + TotalAmt + '</td>';
                 s += '<td>' + RemAmt + '</td>';
@@ -90,7 +92,7 @@ function loadJSON(callback) {
 
     $.getJSON('https://naveenmnk25.github.io/assests/details.json', function (data) {
         console.log("data", data);
-        Member = data.filter(x => x.sno < 8)
+        var Member = data.filter(x => x.sno < 8)
         AmtSpend = data.filter(x => x.sno >= 8).filter(x => x.spend > 0)
         console.log("Member", Member);
         console.log("AmtSpend", AmtSpend);
@@ -116,6 +118,7 @@ function loadJSON(callback) {
             RemAmt = temp - AmtSpend[i].spend;
             temp = RemAmt;
             s += '<tr>';
+            s += '<td>' + AmtSpend[i].Item + '</td>';
             s += '<td>' + AmtSpend[i].spend + '</td>';
             s += '<td>' + TotalAmt + '</td>';
             s += '<td>' + RemAmt + '</td>';
