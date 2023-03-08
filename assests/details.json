@@ -62,10 +62,14 @@
         "Item": "Oil and Ghee"
     },
     {
-        "sno": 11
+        "sno": 11,
+        "spend": 137,
+        "Item": "vegetables"
     },
     {
-        "sno": 12
+        "sno": 12,
+        "spend": 370,
+        "Item": "Chicken and coconut"
     },
     {
         "sno": 13
