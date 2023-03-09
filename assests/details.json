@@ -72,7 +72,9 @@
         "Item": "Chicken and coconut"
     },
     {
-        "sno": 13
+        "sno": 13,
+        "spend": 80,
+        "Item": "Mavu"
     },
     {
         "sno": 14
