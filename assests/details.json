@@ -82,10 +82,14 @@
         "Item": "New Pan"
     },
     {
-        "sno": 15
+        "sno": 15,
+        "spend": 329,
+        "Item": "Vegi,mavu,egg"
     },
     {
-        "sno": 16
+        "sno": 16,
+        "spend": 30,
+        "Item": "coconut,chilli"
     },
     {
         "sno": 17
