@@ -11,7 +11,7 @@
         "Name": "DK",
         "Each ": 1500,
         "ToGive": 1500,
-        "Given": 0
+        "Given": 1342
     },
     {
         "sno": 3,
@@ -32,7 +32,7 @@
         "Name": "Vignesh",
         "Each ": 1500,
         "ToGive": 1500,
-        "Given": 0
+        "Given": 1440
     },
     {
         "sno": 6,
@@ -44,7 +44,7 @@
     {
         "sno": 7,
         "Name": "Total",
-        "Given": 4500
+        "Given": 7282
     },
     {
         "sno": 8,
@@ -92,13 +92,19 @@
         "Item": "coconut,chilli"
     },
     {
-        "sno": 17
+        "sno": 17,
+        "spend": 108,
+        "Item": "Mavu,vegi"
     },
     {
-        "sno": 18
+        "sno": 18,
+        "spend": 297,
+        "Item": "Parupu,Ghee"
     },
     {
-        "sno": 19
+        "sno": 19,
+        "spend": 40,
+        "Item": "Mavu"
     },
     {
         "sno": 20
