@@ -107,10 +107,14 @@
         "Item": "Mavu"
     },
     {
-        "sno": 20
+        "sno": 20,
+        "spend": 334,
+        "Item": "Mavu,Chicken and others"
     },
     {
-        "sno": 21
+        "sno": 21,
+        "spend": 16,
+        "Item": "salt"
     },
     {
         "sno": 22
