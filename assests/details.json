@@ -117,10 +117,14 @@
         "Item": "salt"
     },
     {
-        "sno": 22
+        "sno": 22,
+        "spend": 455,
+        "Item": "Mavu,Vegi,Watermelon,egg"
     },
     {
-        "sno": 23
+        "sno": 23,
+        "spend": 400,
+        "Item": "Chicken and coconut"
     },
     {
         "sno": 24
